@@ -15,4 +15,30 @@ body {
     transform: translate(-50%, -75%);
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.name {
+
+}
+.region {
+
+}
+.country {
+
+}
+.localtime {
+
+}
+.temp {
+
+}
+.condition {
+
+}
+.wind-speed {
+
+}
+.humidity {
+
 }
