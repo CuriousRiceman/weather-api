@@ -37,5 +37,34 @@ async function processData(data) {
     const humidityVal = objectToAccess.current.humidity;
     // Finish setting the text content
     nameElem.textContent = nameVal;
+    regionElem.textContent = regionVal;
+    countryElem.textContent = countryVal;
+    localtimeElem.textContent = localtimeVal;
+    // Work on alternating between C and F
+    const tempC = "Temperature: " + tempCVal + "\u00B0C";
+    const tempF = "Temperature: " + tempFVal + "\u00B0F";
+    tempElem.textContent = tempC;
+    tempElem.addEventListener("click", () => {
+        if (tempElem.textContent === tempC) {
+            tempElem.textContent = tempF;
+        } else {
+            tempElem.textContent = tempC;
+        }
+    });
+
+    conditionElem.textContent = conditionText;
+    // Work on wind speed mph and kph
+    const windMph = "Windspeed: " + windSpeedMph + " mph";
+    const windKph = "Windspeed: " + windSpeedKph + " kph";
+    windSpeedElem.textContent = windMph;
+    windSpeedElem.addEventListener("click", () => {
+        if (windSpeedElem.textContent === windMph) {
+            windSpeedElem.textContent = windKph;
+        } else {
+            windSpeedElem.textContent = windMph;
+        }
+    });
+
+    humidityElem.textContent = "Humidity: " +  humidityVal;
 }
 processData(getData("Honolulu"));
