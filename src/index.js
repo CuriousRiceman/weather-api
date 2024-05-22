@@ -67,4 +67,12 @@ async function processData(data) {
 
     humidityElem.textContent = "Humidity: " +  humidityVal;
 }
+
+const searchButton = document.querySelector(".search-button");
+const searchBar = document.querySelector(".search");
+searchButton.addEventListener("click", () => {
+    processData(getData(searchBar.value));
+    searchBar.value = "";
+});
+
 processData(getData("Honolulu"));
