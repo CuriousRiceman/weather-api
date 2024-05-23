@@ -16,29 +16,13 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 25px;
 }
 
-.name {
-
+.search {
+    margin: 5px;
 }
-.region {
 
-}
-.country {
-
-}
-.localtime {
-
-}
-.temp {
-
-}
-.condition {
-
-}
-.wind-speed {
-
-}
-.humidity {
-
+.search-button {
+    margin-bottom: 25px;
 }
